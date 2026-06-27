@@ -48,4 +48,7 @@ object DatabaseModule {
 
     @Provides
     fun provideMutasiStokDao(db: AppDatabase): MutasiStokDao = db.mutasiStokDao()
+
+    @Provides
+    fun provideMutasiSimpananDao(db: AppDatabase): MutasiSimpananDao = db.mutasiSimpananDao()
 }
