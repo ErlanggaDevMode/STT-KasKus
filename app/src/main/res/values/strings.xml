@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Kopkust</string>
+    <string name="title_dashboard">Beranda</string>
+    <string name="title_laporan">Laporan</string>
+    <string name="title_simpinjam">Simpinjam</string>
+    <string name="title_profil">Profil</string>
+    <string name="title_stok">Stok &amp; Inventori</string>
+    <string name="title_kasir">Kasir (POS)</string>
+    <string name="title_keuangan">Keuangan</string>
+    <string name="title_anggota">Anggota</string>
+    <string name="label_email">Email</string>
+    <string name="label_password">Password</string>
+    <string name="btn_login">Masuk</string>
+    <string name="btn_logout">Keluar</string>
+    <string name="btn_cancel">Batal</string>
+    <string name="btn_confirm">Ya</string>
+    <string name="error_empty_field">Kolom ini tidak boleh kosong</string>
+    <string name="error_invalid_email">Format email tidak valid</string>
+</resources>

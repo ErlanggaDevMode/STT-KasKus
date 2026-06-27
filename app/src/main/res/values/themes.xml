@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme parent Theme.Material3.DayNight.NoActionBar ensures Compose handles drawing the UI -->
+    <style name="Theme.Kopkust" parent="android:Theme.Material.Light.NoActionBar">
+        <!-- Customize your primary colors here if needed for system elements -->
+        <item name="android:statusBarColor">#1B6B3A</item>
+        <item name="android:navigationBarColor">#F5F7F5</item>
+    </style>
+</resources>
