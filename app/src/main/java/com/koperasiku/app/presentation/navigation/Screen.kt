@@ -5,43 +5,57 @@ sealed class Screen(val route: String) {
     object Login : Screen("login")
     object ForgotPassword : Screen("forgot_password")
 
-    // Main (setelah login)
+    // Main
     object Dashboard : Screen("dashboard")
+    
+    // Anggota
     object Anggota : Screen("anggota")
     object AnggotaDetail : Screen("anggota/{anggotaId}") {
         fun createRoute(id: String) = "anggota/$id"
     }
-    object AnggotaForm : Screen("anggota/form?id={id}") // null id = create
+    object AnggotaForm : Screen("anggota/form?id={id}") {
+        fun createRoute(id: String?) = "anggota/form?id=$id"
+    }
+
+    // Stok
     object Stok : Screen("stok")
     object StokDetail : Screen("stok/{produkId}") {
         fun createRoute(id: String) = "stok/$id"
     }
-    object ProdukForm : Screen("produk/form?id={id}")
+    object ProdukForm : Screen("produk/form?id={id}") {
+        fun createRoute(id: String?) = "produk/form?id=$id"
+    }
     object StokMasuk : Screen("stok/masuk/{produkId}") {
         fun createRoute(id: String) = "stok/masuk/$id"
     }
     object StokOpname : Screen("stok/opname")
+
+    // POS
     object Pos : Screen("pos")
-    object Struk : Screen("pos/struk/{transaksiId}") {
-        fun createRoute(id: String) = "pos/struk/$id"
-    }
     object RiwayatTransaksi : Screen("pos/riwayat")
+
+    // Kas / Keuangan
     object Keuangan : Screen("keuangan")
-    object CatatKas : Screen("keuangan/catat")
-    object SimpanPinjam : Screen("simpanpinjam")
-    object Setoran : Screen("simpanpinjam/setoran/{anggotaId}") {
-        fun createRoute(id: String) = "simpanpinjam/setoran/$id"
+    object KasForm : Screen("keuangan/form")
+
+    // Simpanan
+    object Simpanan : Screen("simpanan")
+    object SimpananDetail : Screen("simpanan/{anggotaId}") {
+        fun createRoute(id: String) = "simpanan/$id"
     }
+    object SimpananForm : Screen("simpanan/form/{anggotaId}") {
+        fun createRoute(id: String) = "simpanan/form/$id"
+    }
+
+    // Pinjaman
+    object Pinjaman : Screen("pinjaman")
     object PinjamanDetail : Screen("pinjaman/{pinjamanId}") {
         fun createRoute(id: String) = "pinjaman/$id"
     }
-    object AjukanPinjaman : Screen("pinjaman/ajukan")
-    object ApprovalPinjaman : Screen("pinjaman/approval/{pinjamanId}") {
-        fun createRoute(id: String) = "pinjaman/approval/$id"
-    }
-    object BayarAngsuran : Screen("pinjaman/bayar/{pinjamanId}") {
+    object PinjamanForm : Screen("pinjaman/form")
+    object BayarAngsuran : Screen("pinjaman/bayar/{angsuranId}") {
         fun createRoute(id: String) = "pinjaman/bayar/$id"
     }
-    object Laporan : Screen("laporan")
+
     object Profil : Screen("profil")
 }
