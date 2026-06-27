@@ -14,7 +14,8 @@ import com.koperasiku.app.data.local.entity.*
         KasEntity::class,
         SimpananEntity::class,
         PinjamanEntity::class,
-        AngsuranEntity::class
+        AngsuranEntity::class,
+        MutasiStokEntity::class
     ],
     version = 1,
     exportSchema = false
@@ -26,4 +27,5 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun kasDao(): KasDao
     abstract fun simpananDao(): SimpananDao
     abstract fun pinjamanDao(): PinjamanDao
+    abstract fun mutasiStokDao(): MutasiStokDao
 }

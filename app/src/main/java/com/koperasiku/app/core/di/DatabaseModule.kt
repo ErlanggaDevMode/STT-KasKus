@@ -44,4 +44,7 @@ object DatabaseModule {
 
     @Provides
     fun providePinjamanDao(db: AppDatabase): PinjamanDao = db.pinjamanDao()
+
+    @Provides
+    fun provideMutasiStokDao(db: AppDatabase): MutasiStokDao = db.mutasiStokDao()
 }
