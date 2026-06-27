@@ -24,7 +24,8 @@ object DatabaseModule {
             context.applicationContext,
             AppDatabase::class.java,
             "koperasiku_db"
-        ).build()
+        ).fallbackToDestructiveMigration()
+            .build()
     }
 
     @Provides

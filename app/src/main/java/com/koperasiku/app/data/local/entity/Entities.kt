@@ -38,6 +38,7 @@ data class ProdukEntity(
 data class TransaksiEntity(
     @PrimaryKey val id: String,
     @ColumnInfo(name = "nomor_transaksi") val nomorTransaksi: String,
+    @ColumnInfo(name = "anggota_id") val anggotaId: String?,
     @ColumnInfo(name = "kasir_id") val kasirId: String?,
     val subtotal: Long,
     val diskon: Long,
