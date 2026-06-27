@@ -2,10 +2,12 @@ package com.koperasiku.app.core.di
 
 import com.koperasiku.app.data.repository.AnggotaRepositoryImpl
 import com.koperasiku.app.data.repository.AuthRepositoryImpl
+import com.koperasiku.app.data.repository.KasRepositoryImpl
 import com.koperasiku.app.data.repository.ProdukRepositoryImpl
 import com.koperasiku.app.data.repository.TransaksiRepositoryImpl
 import com.koperasiku.app.domain.repository.AnggotaRepository
 import com.koperasiku.app.domain.repository.AuthRepository
+import com.koperasiku.app.domain.repository.KasRepository
 import com.koperasiku.app.domain.repository.ProdukRepository
 import com.koperasiku.app.domain.repository.TransaksiRepository
 import dagger.Binds
@@ -41,4 +43,10 @@ abstract class RepositoryModule {
     abstract fun bindTransaksiRepository(
         impl: TransaksiRepositoryImpl
     ): TransaksiRepository
+
+    @Binds
+    @Singleton
+    abstract fun bindKasRepository(
+        impl: KasRepositoryImpl
+    ): KasRepository
 }
